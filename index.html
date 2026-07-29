@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BarbiePuff — Puff Up Your Dream，专为年轻女性打造的箱包品牌。" />
+  <title>BarbiePuff — Puff Up Your Dream</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            barbie: '#FF58A2',
+            blush: '#FFD6E7',
+            ink: '#4B4650'
+          },
+          fontFamily: {
+            rounded: ['Nunito', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+            sans: ['Inter', 'PingFang SC', 'Microsoft YaHei', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 18px 50px rgba(255, 88, 162, .12)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #fff; color: #4b4650; }
+    .lift { transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
+    .lift:hover { transform: translateY(-7px); box-shadow: 0 18px 45px rgba(255,88,162,.14); border-color: #ff86bb; }
+    .product-card:hover { border-color: #d1d5db; }
+    .pink-btn { transition: background .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .pink-btn:hover { background: #ff3f94; color: #fff; transform: translateY(-2px); box-shadow: 0 9px 20px rgba(255,88,162,.26); }
+    .placeholder-img { background: linear-gradient(135deg,#fff1f7,#ffd6e7 55%,#f7b7d3); }
+    .store-slider-track { animation: store-slide 10s ease-in-out infinite; }
+    .store-slider:hover .store-slider-track { animation-play-state: paused; }
+    @keyframes store-slide {
+      0%, 30% { transform: translateX(0); }
+      50%, 80% { transform: translateX(-33.333333%); }
+      100% { transform: translateX(-66.666667%); }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
+  </style>
+  <link rel="stylesheet" href="brand.css" />
+  <script src="site-nav.js" defer></script>
+</head>
+<body class="font-sans antialiased selection:bg-blush selection:text-barbie">
+
+  <!-- 全站统一导航 -->
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="BarbiePuff 首页">BarbiePuff</a>
+    <nav class="nav" aria-label="主导航">
+      <a class="active" href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="craftsmanship.html">Craft</a>
+      <a href="brand-world.html">World</a>
+      <a class="hide-mobile" href="packaging.html">Packaging</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 首屏标题区 -->
+    <section class="mx-auto max-w-[1100px] px-5 pb-14 pt-12 text-center lg:pb-20 lg:pt-20">
+      <h1 class="font-rounded text-5xl font-extrabold leading-[.98] tracking-tight text-barbie sm:text-6xl lg:text-[76px]">
+        BarbiePuff—Puff Up Your<br class="hidden sm:block" /> Dream
+      </h1>
+      <p class="mt-7 text-xl font-bold text-barbie sm:text-2xl">专为年轻女性打造的箱包品牌</p>
+      <p class="mt-1 font-bold text-barbie">“让粉色成为新世代的力量语言”</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#products" class="pink-btn rounded-full bg-barbie px-6 py-3 text-lg font-extrabold text-white">Collaboration mode</a>
+        <a href="#contact" class="pink-btn rounded-full border-2 border-barbie px-8 py-2.5 text-lg font-extrabold text-barbie">Contact Us&nbsp;&nbsp; ↗</a>
+      </div>
+    </section>
+
+    <!-- 门店横幅：每张停留 3 秒后缓慢向左滑动，第三张为首图副本以实现单向无缝循环 -->
+    <section class="mx-auto max-w-[1280px] px-5 lg:px-8">
+      <div class="store-slider h-[250px] overflow-hidden rounded-[38px] sm:h-[330px] lg:h-[400px]">
+        <div class="store-slider-track flex h-full w-[300%]">
+          <img src="门店外景.png" alt="BarbiePuff 粉色门店外景" class="h-full w-1/3 shrink-0 object-cover" />
+          <img src="门店内景.png" alt="BarbiePuff 粉色门店内景" class="h-full w-1/3 shrink-0 object-cover" />
+          <img src="门店外景.png" alt="" aria-hidden="true" class="h-full w-1/3 shrink-0 object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 商品介绍与主力包款 -->
+    <section id="products" class="mx-auto max-w-[1280px] px-5 pb-16 pt-24 lg:px-8 lg:pt-28">
+      <header class="mb-7">
+        <h2 class="font-rounded text-3xl font-extrabold text-barbie lg:text-4xl">女孩子们的出行好搭档 <span class="text-xl lg:text-3xl">/ A great travel companion for girls</span></h2>
+        <p class="mt-3 text-xl font-extrabold text-barbie">BarbiePuff让粉色成为你的日常魔法</p>
+        <p class="mt-2 max-w-3xl leading-7 text-gray-400">综合各方面的调查，我们选出了三款女生们日常使用频率最高的三款包型，<br class="hidden md:block" />推出三个系列。还设置了一系列的品牌周边，方便喜欢我们品牌的顾客选购</p>
+      </header>
+
+      <div class="grid gap-7 lg:grid-cols-[1fr_1fr_1fr_.82fr]">
+        <!-- 商品图片 01：替换 src 为爱心手提包商品图 -->
+        <article class="lift product-card flex min-h-[390px] flex-col rounded-[32px] border-2 border-gray-300 p-6">
+          <span class="font-rounded text-4xl font-extrabold text-barbie">01</span>
+          <img src="画板 16.png" alt="BarbiePuff 粉色爱心手提包" class="my-2 h-52 w-full rounded-2xl bg-white object-contain" />
+          <h3 class="text-xl font-bold text-barbie">手提包系列</h3>
+          <p class="text-sm text-barbie">漆皮的亮面质感，甜酷又吸睛</p>
+          <p class="mt-auto pt-2 text-2xl font-black text-barbie">139 RMB <del class="ml-2 text-xs font-normal text-gray-300">149.9RMB</del></p>
+        </article>
+
+        <!-- 商品图片 02：替换 src 为菱格斜挎包商品图 -->
+        <article class="lift product-card flex min-h-[390px] flex-col rounded-[32px] border-2 border-gray-300 p-6">
+          <span class="font-rounded text-4xl font-extrabold text-barbie">02</span>
+          <img src="画板 18.png" alt="BarbiePuff 粉色菱格斜挎包" class="my-2 h-52 w-full rounded-2xl bg-white object-contain" />
+          <h3 class="text-xl font-bold text-barbie">斜挎包系列</h3>
+          <p class="text-sm text-barbie">精选小羊皮，适配任何场景，温柔又精致</p>
+          <p class="mt-auto pt-2 text-2xl font-black text-barbie">159 RMB <del class="ml-2 text-xs font-normal text-gray-300">169.9RMB</del></p>
+        </article>
+
+        <!-- 商品图片 03：替换 src 为托特包商品图 -->
+        <article class="lift product-card flex min-h-[390px] flex-col rounded-[32px] border-2 border-gray-300 p-6">
+          <span class="font-rounded text-4xl font-extrabold text-barbie">03</span>
+          <img src="画板 19.png" alt="BarbiePuff 粉色托特包" class="my-2 h-52 w-full rounded-2xl bg-white object-contain" />
+          <h3 class="text-xl font-bold text-barbie">托特包系列</h3>
+          <p class="text-sm text-barbie">复古的油蜡皮，兼顾实用与风格</p>
+          <p class="mt-auto pt-2 text-2xl font-black text-barbie">189 RMB <del class="ml-2 text-xs font-normal text-gray-300">199.9RMB</del></p>
+        </article>
+
+        <!-- 会员优惠卡：桌面端右侧显示，移动端进入内容流 -->
+        <aside id="pricing" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 lg:self-center">
+          <div class="lift rounded-[32px] bg-blush p-7 text-barbie">
+            <div class="flex items-center justify-between gap-2"><strong class="text-5xl">¥50</strong><button class="pink-btn rounded-full bg-barbie px-4 py-2 font-bold text-white">加入会员»</button></div>
+            <p class="mt-4 font-bold text-gray-500">会员礼：每满200减50</p>
+          </div>
+          <div class="lift rounded-[32px] bg-blush p-7 text-barbie">
+            <div class="flex items-center justify-between gap-2"><strong class="text-5xl">¥15</strong><button class="pink-btn rounded-full bg-barbie px-4 py-2 font-bold text-white">关注店铺»</button></div>
+            <p class="mt-4 font-bold text-gray-500">关注店铺即可领取优惠券</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 周边产品板块 -->
+    <section id="service" class="mx-auto max-w-[1280px] px-5 pb-16 lg:px-8">
+      <div class="grid gap-7 lg:grid-cols-[1.2fr_1.2fr_.72fr_.72fr]">
+        <!-- 品牌周边视频：视频文件与 HTML 放在同一目录，便于直接打开播放 -->
+        <article class="lift flex min-h-[330px] flex-col items-center rounded-[32px] border-2 border-gray-300 p-6 text-center">
+          <video class="placeholder-img h-48 w-full rounded-2xl object-cover" autoplay muted loop playsinline preload="metadata" aria-label="芭芙泡泡钥匙扣品牌周边展示视频">
+            <source src="钥匙扣背景换蓝天.mp4" type="video/mp4" />
+            您的浏览器暂不支持视频播放。
+          </video>
+          <h3 class="mt-4 text-xl font-bold text-barbie">芭芙泡泡品牌周边</h3>
+          <p class="text-sm text-barbie">包含多种日常小用品，新用户免费送</p>
+          <button class="pink-btn mt-3 rounded-full bg-barbie px-5 py-2 font-bold text-white">马上抢»</button>
+        </article>
+
+        <!-- 化妆包/零钱包视频：外层隐藏溢出，视频居中放大以裁掉可能存在的黑边 -->
+        <article class="lift flex min-h-[330px] flex-col items-center rounded-[32px] border-2 border-gray-300 p-6 text-center">
+          <div class="h-48 w-full overflow-hidden rounded-2xl bg-white">
+            <video class="h-full w-full scale-[1.06] object-cover object-center" autoplay muted loop playsinline preload="metadata" aria-label="BarbiePuff 化妆包和零钱包展示视频">
+              <source src="化妆包零钱包展示.mp4" type="video/mp4" />
+              您的浏览器暂不支持视频播放。
+            </video>
+          </div>
+          <h3 class="mt-4 text-xl font-bold text-barbie">化妆包/零钱包</h3>
+          <p class="text-sm text-barbie">品牌副线，经典耐用，价格实惠</p>
+          <button class="pink-btn mt-3 rounded-full bg-barbie px-5 py-2 font-bold text-white">马上抢»</button>
+        </article>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+          <a href="#" class="lift flex min-h-36 items-center justify-between gap-3 rounded-[30px] bg-purple-200 px-5 py-4 text-white">
+            <span class="flex min-w-0 flex-1 flex-col items-center text-center">
+              <img src="barbiepuff白色标志.png" alt="BarbiePuff 标志" class="h-16 w-auto object-contain" />
+              <strong class="mt-1 whitespace-nowrap text-xl font-black tracking-wide">梦幻紫系列</strong>
+            </span>
+            <span class="shrink-0 rounded-full bg-barbie px-4 py-2 text-sm font-bold">去看看»</span>
+          </a>
+          <a href="#" class="lift flex min-h-36 items-center justify-between gap-3 rounded-[30px] bg-cyan-200 px-5 py-4 text-white">
+            <span class="flex min-w-0 flex-1 flex-col items-center text-center">
+              <img src="barbiepuff白色标志.png" alt="BarbiePuff 标志" class="h-16 w-auto object-contain" />
+              <strong class="mt-1 whitespace-nowrap text-xl font-black tracking-wide">薄荷绿系列</strong>
+            </span>
+            <span class="shrink-0 rounded-full bg-barbie px-4 py-2 text-sm font-bold">去看看»</span>
+          </a>
+        </div>
+
+        <!-- 图片位置：品牌模特手持粉色包展示图 -->
+        <article class="lift relative min-h-[330px] overflow-hidden rounded-[32px]">
+          <!-- 竖向主体完整保留，仅根据卡片比例裁掉左右背景，避免裁到模特头部和包 -->
+          <img src="model-look.png" alt="BarbiePuff 模特手持粉色菱格包" class="absolute inset-0 h-full w-full object-cover object-center" />
+          <div class="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/30 to-transparent p-5 pt-20 text-white"><span class="font-bold">轻一点，梦就成真</span><button class="pink-btn rounded-full bg-barbie px-3 py-2 text-sm font-bold">马上抢»</button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 底部优势栏 -->
+    <section id="about" class="mx-auto grid max-w-[1280px] gap-6 px-5 pb-20 lg:grid-cols-[1.35fr_.72fr_1.25fr] lg:px-8">
+      <div class="overflow-hidden rounded-[28px] bg-gray-200 text-center">
+        <div class="grid grid-cols-3 px-3 py-4 text-barbie">
+          <div><strong class="block text-4xl">5</strong><span class="text-xs">无门槛领取</span></div>
+          <div><strong class="block text-4xl">15</strong><span class="text-xs">减免券(满160)可用</span></div>
+          <div><strong class="block text-4xl">礼.</strong><span class="text-xs">入会礼领取周边手持镜*1</span></div>
+        </div>
+        <div class="h-8 bg-barbie"></div>
+      </div>
+      <div class="flex items-center justify-around rounded-[28px] bg-gray-300 p-5 text-white"><strong class="text-2xl">BarbiePuff<br />精选皮革</strong><ul class="border-l border-white pl-4 leading-8"><li>· 镜面漆皮</li><li>· 小羊皮</li><li>· 油蜡皮</li></ul></div>
+      <div class="grid grid-cols-3 divide-x divide-white rounded-[28px] bg-gray-300 p-5 text-center text-white">
+        <div><strong class="text-2xl">质感</strong><span class="block text-xs">Texture</span><p class="mt-3">触的到的细腻</p></div>
+        <div><strong class="text-2xl">亲肤</strong><span class="block text-xs">Skin-friendly</span><p class="mt-3">贴身无负担</p></div>
+        <div><strong class="text-2xl">实用</strong><span class="block text-xs">Practical</span><p class="mt-3">场景不设限</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="footer-top">
+      <a class="wordmark" href="index.html">BarbiePuff</a>
+      <nav class="footer-nav"><a href="index.html">Home</a><a href="collections.html">Collections</a><a href="craftsmanship.html">Craftsmanship</a><a href="brand-world.html">Brand World</a><a href="packaging.html">Packaging</a></nav>
+    </div>
+    <div class="legal">© 2026 BarbiePuff · Puff Up Your Dream</div>
+  </footer>
+</body>
+</html>
